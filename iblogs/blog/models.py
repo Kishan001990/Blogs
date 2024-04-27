@@ -13,6 +13,7 @@ class Category(models.Model):
     add_date = models.DateTimeField(auto_now_add=True, null=True)
 
     def image_tag(self):
+        
         return format_html('<img src="/media/{}" style="width:80px;height:80px" />'.format(self.image))
 
     def __str__(self):
